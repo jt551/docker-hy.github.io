@@ -4,6 +4,4 @@ orbs:
 workflows:
   deploy:
     jobs:
-      - heroku/publish:
-          image: jtwa551/docker-hy.github.io
-          tag: 'latest'
+      - heroku/deploy-via-git
