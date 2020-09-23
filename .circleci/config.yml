@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
-  heroku: circleci/heroku@1.2.2
+  docker: circleci/docker@1.0.0
 workflows:
-  heroku_deploy:
+  deploy:
     jobs:
-      - heroku/push-docker-image:
-          app-name: appfor32
+      - docker/publish:
+          image: jtwa551/docker-hy.github.io
+          tag: 'latest'
